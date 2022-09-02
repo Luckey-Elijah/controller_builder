@@ -1,0 +1,29 @@
+name: Example
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    paths:
+      - '.github/workflows/example_verify_and_test.yaml'
+      - 'example/**'
+      - ./**
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - '.github/workflows/**'
+      - 'example/**'
+      - ./**
+
+jobs:
+  verify_and_test:
+    name: Verify and Test
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      working_directory: example
+      min_coverage: 100
+      flutter_channel: stable
+      flutter_version: 3.0.4
