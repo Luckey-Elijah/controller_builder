@@ -1,9 +1,8 @@
-name: Controller Builder
+name: ControllerBuilder
 
 on:
   pull_request:
     branches:
-      - master
       - main
     paths:
       - '.github/workflows/controller_builder_verify_and_test.yaml'
@@ -11,7 +10,6 @@ on:
 
   push:
     branches:
-      - master
       - main
     paths:
       - '.github/workflows/**'
