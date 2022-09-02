@@ -24,4 +24,3 @@ jobs:
       working_directory: .
       min_coverage: 100
       flutter_channel: stable
-      flutter_version: 3.0.4
