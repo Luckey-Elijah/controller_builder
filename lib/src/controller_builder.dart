@@ -39,12 +39,10 @@ class ControllerBuilder<T extends ChangeNotifier> extends StatefulWidget {
   final ControllerDisposeCallback<T> dispose;
 
   @override
-  State<ControllerBuilder> createState() => ControllerBuilderState<T>();
+  State<ControllerBuilder> createState() => _ControllerBuilderState<T>();
 }
 
-@visibleForTesting
-// ignore: public_member_api_docs
-class ControllerBuilderState<T extends ChangeNotifier>
+class _ControllerBuilderState<T extends ChangeNotifier>
     extends State<ControllerBuilder<T>> {
   late final T _controller;
 
